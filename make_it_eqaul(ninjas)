@@ -1,0 +1,31 @@
+#include <bits/stdc++.h> 
+int makeItEqual(int X, int Y)
+{
+	// Write your code here.
+    if(X<Y)
+    {
+        int diff=Y-X;
+        if(diff%2==0)
+        {
+            return 2;
+        }
+        else
+        {
+            return 1;
+        }
+    }
+    if(Y<X)
+    {
+        int diff=X-Y;
+        if(diff%2==0)
+        {
+            return 1;
+        }
+        else
+        {
+            return 2;
+        }
+    }
+    return 0;
+    
+}
