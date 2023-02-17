@@ -1,0 +1,23 @@
+class Solution {
+    private:
+    TreeNode * previous=nullptr;
+    int min=INT_MAX;
+public:
+    int minDiffInBST(TreeNode* root) {
+        inorder(root);
+        return min;
+
+        
+    }
+    void inorder(TreeNode * root)
+    {
+        if(root==nullptr)return;
+        inorder(root->left);
+        if(previous!=nullptr)
+        {
+            min=std::min(min,root->val-previous->val);
+        }
+        previous=root;
+        inorder(root->right);
+    }
+};
