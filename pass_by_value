@@ -1,0 +1,43 @@
+//pass by value only copy of the value is taken and made some changes
+#include <iostream>
+using namespace std;
+void dosomething(string s)
+{
+    s[0]='t';
+    cout<<s<<endl;
+}
+int main() {
+    string s="raj";
+    dosomething(s);
+    cout<<s<<endl;
+    
+   
+    return 0;
+}
+
+output:
+taj
+raj
+_________________________________________________________________________
+//pass by referenece the original value gets changed
+#include <iostream>
+using namespace std;
+void dosomething(string &s)
+{
+    s[0]='t';
+    cout<<s<<endl;
+}
+int main() {
+    string s="raj";
+    dosomething(s);
+    cout<<s<<endl;
+    
+   
+    return 0;
+}
+
+output:
+taj
+taj
+
+
